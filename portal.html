@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Portal | Alexxy Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="portal-body">
+    <main class="portal-container">
+        <div class="portal-header">
+            <a href="index.html" class="portal-logo">
+                <i class="fas fa-arrow-left"></i>
+                Alexxy Brand
+            </a>
+            <p class="portal-subtitle">Business Portal</p>
+        </div>
+
+        <div class="portal-content">
+            <h1>Welcome to Alexxy Brand</h1>
+            <p class="portal-intro">Select your role to continue</p>
+
+            <div class="portal-grid">
+                <!-- ADMIN PORTAL -->
+                <div class="portal-card admin-portal">
+                    <div class="portal-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h2>Admin Panel</h2>
+                    <p>Manage orders, products, and business operations</p>
+                    <a href="admin.html" class="portal-btn admin-btn">
+                        Admin Access <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- CUSTOMER PORTAL -->
+                <div class="portal-card customer-portal">
+                    <div class="portal-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2>Customer Portal</h2>
+                    <p>Place orders, track requests, and view pricing</p>
+                    <a href="customer.html" class="portal-btn customer-btn">
+                        Customer Access <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portal-footer">
+            <p>Need help? <a href="contact.html">Contact us</a></p>
+        </div>
+    </main>
+
+    <style>
+        /* PORTAL PAGE STYLES */
+        .portal-body {
+            background: radial-gradient(circle at top right,
+                    rgba(216, 195, 165, .12),
+                    transparent 35%),
+                radial-gradient(circle at bottom left,
+                    rgba(155, 101, 55, .18),
+                    transparent 40%),
+                var(--bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .portal-container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(42, 24, 16, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(216, 195, 165, .2);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .portal-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .portal-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .portal-logo:hover {
+            color: var(--secondary);
+        }
+
+        .portal-logo i {
+            font-size: 1rem;
+        }
+
+        .portal-subtitle {
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .portal-content h1 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .portal-intro {
+            text-align: center;
+            color: var(--muted);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .portal-card {
+            background: rgba(43, 23, 16, 0.8);
+            border: 2px solid rgba(216, 195, 165, .2);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(216, 195, 165, .5);
+            box-shadow: 0 15px 40px rgba(155, 101, 55, .2);
+        }
+
+        .portal-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .admin-portal .portal-icon {
+            color: #FF6B6B;
+        }
+
+        .customer-portal .portal-icon {
+            color: #4ECDC4;
+        }
+
+        .portal-card h2 {
+            font-size: 1.8rem;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        .portal-card p {
+            color: var(--muted);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .portal-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid;
+            cursor: pointer;
+        }
+
+        .admin-btn {
+            background: rgba(255, 107, 107, 0.1);
+            color: #FF6B6B;
+            border-color: #FF6B6B;
+        }
+
+        .admin-btn:hover {
+            background: #FF6B6B;
+            color: white;
+        }
+
+        .customer-btn {
+            background: rgba(78, 205, 196, 0.1);
+            color: #4ECDC4;
+            border-color: #4ECDC4;
+        }
+
+        .customer-btn:hover {
+            background: #4ECDC4;
+            color: white;
+        }
+
+        .portal-footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .portal-footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .portal-footer a:hover {
+            color: var(--secondary);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .portal-container {
+                padding: 40px 25px;
+            }
+
+            .portal-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .portal-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .portal-card {
+                padding: 30px 20px;
+            }
+
+            .portal-icon {
+                font-size: 2.5rem;
+            }
+
+            .portal-card h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

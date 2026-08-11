@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal | Alexxy Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="customer-body">
+    <main class="customer-page">
+        <!-- CUSTOMER HEADER -->
+        <section class="customer-header">
+            <div class="customer-top-bar">
+                <a href="portal.html" class="customer-back">
+                    <i class="fas fa-arrow-left"></i> Back to Portal
+                </a>
+                <a href="index.html" class="customer-home">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+
+            <div class="customer-welcome">
+                <h1>Customer Portal</h1>
+                <p>Manage your custom orders and track your requests</p>
+            </div>
+        </section>
+
+        <!-- CUSTOMER MAIN CONTENT -->
+        <section class="customer-dashboard">
+            <aside class="customer-sidebar">
+                <div class="customer-nav">
+                    <a href="#orders" class="customer-nav-link active">
+                        <i class="fas fa-shopping-bag"></i> My Orders
+                    </a>
+                    <a href="#new-order" class="customer-nav-link">
+                        <i class="fas fa-plus-circle"></i> New Order
+                    </a>
+                    <a href="#tracking" class="customer-nav-link">
+                        <i class="fas fa-truck"></i> Track Order
+                    </a>
+                    <a href="#pricing" class="customer-nav-link">
+                        <i class="fas fa-tag"></i> Pricing
+                    </a>
+                    <a href="#contact" class="customer-nav-link">
+                        <i class="fas fa-envelope"></i> Contact Support
+                    </a>
+                </div>
+            </aside>
+
+            <div class="customer-content">
+                <!-- MY ORDERS SECTION -->
+                <section id="orders" class="customer-section active">
+                    <div class="section-header">
+                        <h2>My Orders</h2>
+                        <p>View and manage your custom orders</p>
+                    </div>
+
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <h3>No Orders Yet</h3>
+                        <p>You haven't placed any orders yet. Start by creating a new order!</p>
+                        <a href="#new-order" class="customer-btn-primary">Place Your First Order</a>
+                    </div>
+                </section>
+
+                <!-- NEW ORDER SECTION -->
+                <section id="new-order" class="customer-section">
+                    <div class="section-header">
+                        <h2>Create New Order</h2>
+                        <p>Request a custom order from Alexxy Brand</p>
+                    </div>
+
+                    <form class="order-form">
+                        <div class="form-group">
+                            <label for="orderName">Full Name *</label>
+                            <input type="text" id="orderName" required placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orderEmail">Email *</label>
+                            <input type="email" id="orderEmail" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orderPhone">Phone Number *</label>
+                            <input type="tel" id="orderPhone" required placeholder="08080518736">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productType">Product Type *</label>
+                            <select id="productType" required>
+                                <option value="">Select a product</option>
+                                <option value="tshirt">T-Shirt</option>
+                                <option value="hoodie">Hoodie</option>
+                                <option value="cap">Trucker Cap</option>
+                                <option value="jersey">Jersey</option>
+                                <option value="patch">Custom Patch</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity *</label>
+                            <input type="number" id="quantity" min="1" required placeholder="How many items?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Design Description *</label>
+                            <textarea id="description" required rows="5" placeholder="Describe your custom design, colors, and requirements..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget (Optional)</label>
+                            <input type="number" id="budget" placeholder="Estimated budget in NGN">
+                        </div>
+
+                        <button type="submit" class="customer-btn-primary">Submit Order Request</button>
+                    </form>
+                </section>
+
+                <!-- TRACKING SECTION -->
+                <section id="tracking" class="customer-section">
+                    <div class="section-header">
+                        <h2>Track Your Order</h2>
+                        <p>Enter your order ID to track progress</p>
+                    </div>
+
+                    <div class="tracking-search">
+                        <input type="text" placeholder="Enter order ID (e.g., ORD-001)" id="trackingId">
+                        <button class="customer-btn-secondary">Search</button>
+                    </div>
+
+                    <div class="empty-state">
+                        <i class="fas fa-search"></i>
+                        <h3>No Order Found</h3>
+                        <p>Enter your order ID above to track its status</p>
+                    </div>
+                </section>
+
+                <!-- PRICING SECTION -->
+                <section id="pricing" class="customer-section">
+                    <div class="section-header">
+                        <h2>Service Pricing</h2>
+                        <p>Our standard pricing for popular services</p>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-hat-cowboy"></i> Trucker Caps</h3>
+                            <p class="price">From ₦2,500</p>
+                            <ul>
+                                <li>Embroidery available</li>
+                                <li>Bulk discounts</li>
+                                <li>Premium finishes</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-shirt"></i> T-Shirts</h3>
+                            <p class="price">From ₦1,500</p>
+                            <ul>
+                                <li>Screen printing</li>
+                                <li>DTF printing</li>
+                                <li>Multiple sizes</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-vest"></i> Hoodies</h3>
+                            <p class="price">From ₦3,500</p>
+                            <ul>
+                                <li>Custom designs</li>
+                                <li>Premium material</li>
+                                <li>Custom fit options</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-tags"></i> Custom Patches</h3>
+                            <p class="price">From ₦500</p>
+                            <ul>
+                                <li>Woven patches</li>
+                                <li>PVC patches</li>
+                                <li>Embroidered patches</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="pricing-note">*Prices vary based on design complexity and order quantity. Contact us for a custom quote.</p>
+                </section>
+
+                <!-- CONTACT SECTION -->
+                <section id="contact" class="customer-section">
+                    <div class="section-header">
+                        <h2>Contact Support</h2>
+                        <p>Get help with your orders</p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Call Us</h3>
+                            <a href="tel:08080518736">08080518736</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <a href="mailto:Alexanderglory858@gmail.com">Alexanderglory858@gmail.com</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-instagram"></i>
+                            <h3>Instagram</h3>
+                            <a href="https://www.instagram.com/alexxy.brand" target="_blank">@alexxy.brand</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        /* CUSTOMER PAGE STYLES */
+        .customer-body {
+            background: radial-gradient(circle at top right,
+                    rgba(216, 195, 165, .12),
+                    transparent 35%),
+                radial-gradient(circle at bottom left,
+                    rgba(155, 101, 55, .18),
+                    transparent 40%),
+                var(--bg);
+        }
+
+        .customer-page {
+            min-height: 100vh;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        /* HEADER */
+        .customer-header {
+            background: rgba(42, 24, 16, 0.5);
+            border-bottom: 1px solid rgba(216, 195, 165, .2);
+            padding: 30px 0;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .customer-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            margin-bottom: 20px;
+        }
+
+        .customer-back,
+        .customer-home {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .customer-back:hover,
+        .customer-home:hover {
+            color: var(--secondary);
+        }
+
+        .customer-welcome {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .customer-welcome h1 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .customer-welcome p {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        /* DASHBOARD LAYOUT */
+        .customer-dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* SIDEBAR */
+        .customer-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .customer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            background: rgba(42, 24, 16, 0.5);
+            border: 1px solid rgba(216, 195, 165, .2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .customer-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 20px;
+            color: var(--text);
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(216, 195, 165, .1);
+        }
+
+        .customer-nav-link:last-child {
+            border-bottom: none;
+        }
+
+        .customer-nav-link:hover,
+        .customer-nav-link.active {
+            background: rgba(155, 101, 55, 0.2);
+            border-left-color: var(--secondary);
+            color: var(--accent);
+        }
+
+        .customer-nav-link i {
+            font-size: 1.1rem;
+            width: 25px;
+        }
+
+        /* CONTENT */
+        .customer-content {
+            background: rgba(42, 24, 16, 0.5);
+            border: 1px solid rgba(216, 195, 165, .2);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .customer-section {
+            display: none;
+        }
+
+        .customer-section.active {
+            display: block;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* EMPTY STATE */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        /* FORMS */
+        .order-form {
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: var(--text);
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            background: rgba(27, 15, 10, 0.5);
+            border: 1px solid rgba(216, 195, 165, .3);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(27, 15, 10, 0.7);
+            box-shadow: 0 0 0 3px rgba(155, 101, 55, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* BUTTONS */
+        .customer-btn-primary,
+        .customer-btn-secondary {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .customer-btn-primary {
+            background: var(--secondary);
+            color: var(--text);
+            width: 100%;
+        }
+
+        .customer-btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(155, 101, 55, 0.3);
+        }
+
+        .customer-btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .customer-btn-secondary:hover {
+            background: var(--secondary);
+            color: var(--text);
+        }
+
+        /* TRACKING */
+        .tracking-search {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tracking-search input {
+            flex: 1;
+            padding: 12px 15px;
+            background: rgba(27, 15, 10, 0.5);
+            border: 1px solid rgba(216, 195, 165, .3);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        .tracking-search input:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .tracking-search button {
+            padding: 12px 30px;
+            background: var(--secondary);
+            color: var(--text);
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tracking-search button:hover {
+            background: var(--accent);
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card {
+            background: rgba(27, 15, 10, 0.5);
+            border: 1px solid rgba(216, 195, 165, .2);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(155, 101, 55, 0.2);
+        }
+
+        .pricing-card h3 {
+            color: var(--text);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .pricing-card i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .pricing-card .price {
+            font-size: 1.8rem;
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        .pricing-card ul li:before {
+            content: "✓ ";
+            color: var(--secondary);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .pricing-note {
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* CONTACT */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: rgba(27, 15, 10, 0.5);
+            border: 1px solid rgba(216, 195, 165, .2);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: var(--text);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-card a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .customer-dashboard {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .customer-sidebar {
+                position: static;
+            }
+
+            .customer-nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .customer-nav-link {
+                flex: 1;
+                min-width: 150px;
+                justify-content: center;
+                border-left: none;
+                border-bottom: 1px solid rgba(216, 195, 165, .1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .customer-page {
+                padding-top: 80px;
+            }
+
+            .customer-top-bar,
+            .customer-welcome,
+            .customer-dashboard {
+                padding: 0 20px;
+            }
+
+            .customer-welcome h1 {
+                font-size: 1.6rem;
+            }
+
+            .customer-content {
+                padding: 25px;
+            }
+
+            .customer-nav {
+                flex-direction: column;
+            }
+
+            .customer-nav-link {
+                border-left: 3px solid transparent;
+                border-bottom: 1px solid rgba(216, 195, 165, .1);
+                justify-content: flex-start;
+            }
+
+            .pricing-grid,
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        // Customer navigation
+        document.querySelectorAll('.customer-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links and sections
+                document.querySelectorAll('.customer-nav-link').forEach(l => l.classList.remove('active'));
+                document.querySelectorAll('.customer-section').forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked link and corresponding section
+                this.classList.add('active');
+                const target = this.getAttribute('href').substring(1);
+                document.getElementById(target)?.classList.add('active');
+            });
+        });
+
+        // Form submission
+        document.querySelector('.order-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order request! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

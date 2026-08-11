@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Alexxy Brand</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+    <main class="admin-page">
+        <section class="admin-login" id="adminLogin">
+            <div class="admin-login-panel">
+                <a href="index.html" class="admin-brand">Alexxy Brand</a>
+                <h1>Admin Login</h1>
+
+                <form id="adminLoginForm">
+                    <div class="input-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" placeholder="alexxy-admin" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Sign In</button>
+                    <p class="admin-login-hint">Temporary password: alexxy-admin</p>
+                    <p class="admin-login-error" id="adminLoginError"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="admin-dashboard" id="adminDashboard" hidden>
+            <div class="admin-menu-toggle" id="adminMenuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <aside class="admin-sidebar" id="adminSidebar">
+                <a href="index.html" class="admin-brand">Alexxy Brand</a>
+
+                <nav class="admin-menu">
+                    <a href="#overview" class="active"><i class="fas fa-chart-line"></i> Overview</a>
+                    <a href="#requests"><i class="fas fa-file-invoice"></i> Requests</a>
+                    <a href="#products"><i class="fas fa-shirt"></i> Products</a>
+                    <a href="#content"><i class="fas fa-pen-to-square"></i> Content</a>
+                </nav>
+            </aside>
+
+            <div class="admin-main">
+                <header class="admin-topbar">
+                    <div>
+                        <p>Dashboard</p>
+                        <h1>Welcome back</h1>
+                    </div>
+
+                    <button type="button" class="admin-logout" id="adminLogout">
+                        <i class="fas fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+                </header>
+
+                <section class="admin-section" id="overview">
+                    <div class="admin-stats-grid">
+                        <article class="admin-stat">
+                            <span><i class="fas fa-file-invoice"></i></span>
+                            <div>
+                                <p>Quote Requests</p>
+                                <h2 id="quoteRequestCount">0</h2>
+                            </div>
+                        </article>
+
+                        <article class="admin-stat">
+                            <span><i class="fas fa-box-open"></i></span>
+                            <div>
+                                <p>Products</p>
+                                <h2>4</h2>
+                            </div>
+                        </article>
+
+                        <article class="admin-stat">
+                            <span><i class="fas fa-clock"></i></span>
+                            <div>
+                                <p>Pending Jobs</p>
+                                <h2>3</h2>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="admin-section" id="requests">
+                    <div class="admin-section-header">
+                        <div>
+                            <p>Requests</p>
+                            <h2>Latest Quote Requests</h2>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Phone</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminQuoteRows">
+                                <tr>
+                                    <td colspan="5">No quote requests yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="admin-grid">
+                    <div class="admin-panel" id="products">
+                        <div class="admin-section-header">
+                            <div>
+                                <p>Products</p>
+                                <h2>Popular Items</h2>
+                            </div>
+                        </div>
+
+                        <ul class="admin-product-list">
+                            <li><span>Caps</span><strong>Active</strong></li>
+                            <li><span>T-Shirts</span><strong>Active</strong></li>
+                            <li><span>Hoodies</span><strong>Active</strong></li>
+                            <li><span>Patches</span><strong>Active</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="admin-panel" id="content">
+                        <div class="admin-section-header">
+                            <div>
+                                <p>Content</p>
+                                <h2>Site Notes</h2>
+                            </div>
+                        </div>
+
+                        <form class="admin-note-form">
+                            <div class="input-group">
+                                <label for="adminNote">Update Note</label>
+                                <textarea id="adminNote" placeholder="New collection photos, service update, price review..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Save Note</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
