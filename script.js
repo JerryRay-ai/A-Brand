@@ -129,7 +129,9 @@ const adminLoginForm = document.getElementById("adminLoginForm");
 const adminLoginError = document.getElementById("adminLoginError");
 const adminLogout = document.getElementById("adminLogout");
 const adminQuoteRows = document.getElementById("adminQuoteRows");
+const adminCustomOrderRows = document.getElementById("adminCustomOrderRows");
 const quoteRequestCount = document.getElementById("quoteRequestCount");
+const customOrderCount = document.getElementById("customOrderCount");
 const adminNoteForm = document.querySelector(".admin-note-form");
 
 function getQuoteRequests() {
@@ -137,6 +139,15 @@ function getQuoteRequests() {
         return JSON.parse(localStorage.getItem("alexxyQuoteRequests") || "[]");
     } catch (error) {
         localStorage.removeItem("alexxyQuoteRequests");
+        return [];
+    }
+}
+
+function getCustomOrders() {
+    try {
+        return JSON.parse(localStorage.getItem("customRequests") || "[]");
+    } catch (error) {
+        localStorage.removeItem("customRequests");
         return [];
     }
 }
@@ -174,6 +185,30 @@ function renderAdminQuotes() {
     `).join("");
 }
 
+function renderCustomOrders() {
+    if (!adminCustomOrderRows || !customOrderCount) {
+        return;
+    }
+
+    const customOrders = getCustomOrders();
+    customOrderCount.innerText = customOrders.length;
+
+    if (customOrders.length === 0) {
+        adminCustomOrderRows.innerHTML = '<tr><td colspan="5">No custom orders yet.</td></tr>';
+        return;
+    }
+
+    adminCustomOrderRows.innerHTML = customOrders.map(order => `
+        <tr>
+            <td>${escapeHtml(order.product)}</td>
+            <td>${escapeHtml(order.quantity)}</td>
+            <td>${escapeHtml(order.printMethod)}</td>
+            <td>${escapeHtml(order.notes || "—")}</td>
+            <td>${escapeHtml(order.timestamp)}</td>
+        </tr>
+    `).join("");
+}
+
 function showAdminDashboard() {
     if (!adminLogin || !adminDashboard) {
         return;
@@ -182,6 +217,7 @@ function showAdminDashboard() {
     adminLogin.hidden = true;
     adminDashboard.hidden = false;
     renderAdminQuotes();
+    renderCustomOrders();
 }
 
 if (adminLoginForm) {
@@ -194,7 +230,7 @@ if (adminLoginForm) {
 
         const password = document.getElementById("adminPassword").value.trim();
 
-        if (password !== "alexxy-admin") {
+        if (password !== "alexxy015") {
             adminLoginError.innerText = "Incorrect password.";
             return;
         }

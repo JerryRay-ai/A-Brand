@@ -1455,3 +1455,682 @@ body {
 .logo a:hover {
     color: var(--accent-light);
 }
+
+/* ===== PRODUCTS PAGE ===== */
+
+/* PRODUCTS HERO */
+.products-hero {
+    padding: 80px 8% 50px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(155, 101, 55, .15), rgba(42, 24, 16, .8));
+    border-radius: 30px;
+    margin: 80px 8% 0;
+    border: 1px solid rgba(216, 195, 165, .3);
+}
+
+/* PRODUCTS SECTION */
+.products {
+    padding: 100px 8%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: var(--card);
+    border: 1px solid rgba(216, 195, 165, .35);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(216, 195, 165, .6);
+    box-shadow: 0 15px 40px rgba(155, 101, 55, .2);
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(155, 101, 55, .85);
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+}
+
+.product-info {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--accent-light);
+}
+
+.product-description {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* SPECS SECTION */
+.specs-section {
+    margin-bottom: 20px;
+}
+
+.specs-toggle {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(155, 101, 55, .2);
+    border: 1px solid rgba(216, 195, 165, .3);
+    border-radius: 10px;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.specs-toggle:hover,
+.specs-toggle.active {
+    background: rgba(155, 101, 55, .35);
+    border-color: rgba(216, 195, 165, .5);
+}
+
+.specs-toggle i {
+    transition: transform .3s;
+}
+
+.specs-content {
+    background: rgba(155, 101, 55, .1);
+    border-radius: 10px;
+    padding: 16px 14px;
+    margin-top: 10px;
+    border-left: 3px solid var(--secondary);
+}
+
+.specs-content ul {
+    list-style: none;
+}
+
+.specs-content li {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 6px 0;
+}
+
+.specs-content strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* PRICING SECTION */
+.pricing-section {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: rgba(155, 101, 55, .12);
+    border-radius: 12px;
+    border: 1px solid rgba(216, 195, 165, .25);
+}
+
+.price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.price-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.price-note {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+/* PRODUCT BUTTONS */
+.product-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.customize-btn {
+    flex: 1;
+    padding: 12px 16px;
+    background: var(--secondary);
+    color: var(--text);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.customize-btn:hover {
+    background: #B97843;
+    transform: translateY(-2px);
+}
+
+.quote-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--text);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: .3s;
+    text-align: center;
+}
+
+.quote-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* BULK PRICING SECTION */
+.bulk-pricing {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, rgba(155, 101, 55, .1), rgba(42, 24, 16, .6));
+    border-radius: 30px;
+    margin: 40px 8%;
+    border: 1px solid rgba(216, 195, 165, .25);
+}
+
+.pricing-table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(216, 195, 165, .3);
+}
+
+.pricing-table thead {
+    background: rgba(155, 101, 55, .2);
+}
+
+.pricing-table th {
+    padding: 18px;
+    text-align: left;
+    color: var(--accent);
+    font-weight: 700;
+    border-bottom: 2px solid rgba(216, 195, 165, .3);
+}
+
+.pricing-table td {
+    padding: 16px 18px;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(216, 195, 165, .15);
+}
+
+.pricing-table tbody tr:hover {
+    background: rgba(155, 101, 55, .08);
+}
+
+.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.discount {
+    display: inline-block;
+    margin-left: 8px;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.pricing-note {
+    background: rgba(155, 101, 55, .15);
+    border-left: 3px solid var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.pricing-note p {
+    margin: 8px 0;
+}
+
+/* PRODUCTION TIMELINE */
+.production-info {
+    padding: 80px 8%;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.timeline-step {
+    background: var(--card);
+    border: 1px solid rgba(216, 195, 165, .35);
+    border-radius: 15px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: .3s;
+}
+
+.timeline-step:hover {
+    border-color: rgba(216, 195, 165, .6);
+    transform: translateY(-5px);
+}
+
+.timeline-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(155, 101, 55, .25);
+    border-radius: 50%;
+    color: var(--secondary);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.timeline-step h3 {
+    color: var(--accent-light);
+    margin-bottom: 12px;
+}
+
+.timeline-step p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.disclaimer-box {
+    background: rgba(155, 101, 55, .12);
+    border-left: 4px solid var(--secondary);
+    border-radius: 12px;
+    padding: 24px;
+    color: var(--muted);
+}
+
+.disclaimer-box h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.disclaimer-box p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* CUSTOMIZATION MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .85);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card);
+    border: 1px solid rgba(216, 195, 165, .4);
+    border-radius: 25px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid rgba(216, 195, 165, .2);
+    position: sticky;
+    top: 0;
+    background: var(--card);
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: var(--accent-light);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--muted);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.modal-close:hover {
+    color: var(--secondary);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: rgba(155, 101, 55, .1);
+    border: 1px solid rgba(216, 195, 165, .3);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: rgba(155, 101, 55, .15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.modal-buttons .primary-btn,
+.modal-buttons .secondary-btn {
+    flex: 1;
+    padding: 14px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.modal-buttons .primary-btn {
+    background: var(--secondary);
+    color: var(--text);
+}
+
+.modal-buttons .primary-btn:hover {
+    background: #B97843;
+}
+
+.modal-buttons .secondary-btn {
+    background: rgba(216, 195, 165, .15);
+    color: var(--text);
+    border: 1px solid rgba(216, 195, 165, .3);
+}
+
+.modal-buttons .secondary-btn:hover {
+    background: rgba(216, 195, 165, .25);
+}
+
+/* ABOUT SECTION IN INDEX */
+.about-section {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, rgba(155, 101, 55, .1), rgba(42, 24, 16, .5));
+    border-radius: 30px;
+    margin: 60px 8%;
+    border: 1px solid rgba(216, 195, 165, .25);
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: var(--accent-light);
+    margin-bottom: 25px;
+}
+
+.about-intro {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-mission {
+    background: rgba(155, 101, 55, .12);
+    border-left: 4px solid var(--secondary);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.about-mission h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.about-mission p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.about-cta {
+    text-align: center;
+}
+
+/* ===== RESPONSIVE PRODUCTS ===== */
+
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .pricing-table {
+        font-size: 0.9rem;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 12px;
+    }
+
+    .timeline-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bulk-pricing,
+    .production-info {
+        padding: 60px 6%;
+        margin: 30px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-hero {
+        padding: 50px 6% 35px;
+        margin: 60px 6% 0;
+    }
+
+    .products {
+        padding: 60px 6%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .customize-btn,
+    .quote-btn {
+        width: 100%;
+    }
+
+    .pricing-table {
+        font-size: 0.8rem;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 10px 8px;
+    }
+
+    .timeline-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-step {
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .bulk-pricing,
+    .production-info {
+        padding: 50px 6%;
+        margin: 20px 6%;
+    }
+
+    .pricing-note {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .disclaimer-box {
+        padding: 18px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .about-section {
+        padding: 50px 6%;
+        margin: 40px 6%;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+}

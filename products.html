@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Products | Alexxy Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Alexxy Brand</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="quotes.html" class="nav-btn">
+            Get Started
+        </a>
+
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- PRODUCTS HERO -->
+    <section class="products-hero page-section">
+        <div class="section-title">
+            <h2>Custom Apparel & Merchandise</h2>
+            <p>High-quality, printed-to-order items tailored to your brand. Ships in 2–5 days.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products page-section">
+        <div class="products-grid">
+
+            <!-- PRODUCT 1: CUSTOM T-SHIRTS -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Heroimage.jpeg" alt="Custom Screen Printed T-Shirts">
+                    <div class="product-badge">Printed to Order</div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Custom T-Shirts</h3>
+                    <p class="product-description">Premium 100% cotton tees with vibrant screen printing or DTG designs.</p>
+
+                    <!-- SPECS TOGGLE -->
+                    <div class="specs-section">
+                        <button class="specs-toggle" data-specs="tshirt">
+                            <i class="fas fa-chevron-down"></i> Fabric & Print Details
+                        </button>
+                        <div class="specs-content" id="tshirt-specs" style="display: none;">
+                            <ul>
+                                <li><strong>Fabric:</strong> 100% Cotton, 6.0 oz weight</li>
+                                <li><strong>Print Methods:</strong> Screen Printing, Direct-to-Garment (DTG)</li>
+                                <li><strong>Colors:</strong> 12+ standard colors + custom Pantone matching</li>
+                                <li><strong>Care:</strong> Wash cold, tumble dry low</li>
+                                <li><strong>Durability:</strong> 50+ wash cycles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PRICING -->
+                    <div class="pricing-section">
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="price">₦</span>
+                            <span class="price-note">(1–10 units)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="product-buttons">
+                        <button class="customize-btn" onclick="openCustomizeModal('T-Shirt')">
+                            <i class="fas fa-pencil-alt"></i> Customize
+                        </button>
+                        <a href="quotes.html" class="quote-btn">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2: TRUCKER CAPS -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Heroimage.jpeg" alt="Embroidered Trucker Caps">
+                    <div class="product-badge">Printed to Order</div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Embroidered Trucker Caps</h3>
+                    <p class="product-description">Durable, structured trucker caps with precision embroidery. Perfect for teams and events.</p>
+
+                    <!-- SPECS TOGGLE -->
+                    <div class="specs-section">
+                        <button class="specs-toggle" data-specs="caps">
+                            <i class="fas fa-chevron-down"></i> Fabric & Print Details
+                        </button>
+                        <div class="specs-content" id="caps-specs" style="display: none;">
+                            <ul>
+                                <li><strong>Material:</strong> 100% Polyester, structured 6-panel</li>
+                                <li><strong>Embroidery:</strong> 12,000 stitch maximum per design</li>
+                                <li><strong>Closure:</strong> Snapback or adjustable back strap</li>
+                                <li><strong>Colors:</strong> 15+ base colors + custom thread matching</li>
+                                <li><strong>Durability:</strong> UV-resistant, machine washable</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PRICING -->
+                    <div class="pricing-section">
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="price">₦</span>
+                            <span class="price-note">(1–10 units)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="product-buttons">
+                        <button class="customize-btn" onclick="openCustomizeModal('Trucker Cap')">
+                            <i class="fas fa-pencil-alt"></i> Customize
+                        </button>
+                        <a href="quotes.html" class="quote-btn">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3: HOODIES -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Heroimage.jpeg" alt="Custom Printed Hoodies">
+                    <div class="product-badge">Printed to Order</div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Custom Hoodies</h3>
+                    <p class="product-description">Comfortable heavyweight hoodies with your custom design. Screen printed or embroidered.</p>
+
+                    <!-- SPECS TOGGLE -->
+                    <div class="specs-section">
+                        <button class="specs-toggle" data-specs="hoodies">
+                            <i class="fas fa-chevron-down"></i> Fabric & Print Details
+                        </button>
+                        <div class="specs-content" id="hoodies-specs" style="display: none;">
+                            <ul>
+                                <li><strong>Fabric:</strong> 80% Cotton / 20% Polyester, 9.5 oz</li>
+                                <li><strong>Print Methods:</strong> Screen Printing, DTG</li>
+                                <li><strong>Fit:</strong> Unisex relaxed fit with kangaroo pocket</li>
+                                <li><strong>Colors:</strong> 20+ colors available</li>
+                                <li><strong>Sizes:</strong> XS–5XL</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PRICING -->
+                    <div class="pricing-section">
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="price">₦</span>
+                            <span class="price-note">(1–10 units)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="product-buttons">
+                        <button class="customize-btn" onclick="openCustomizeModal('Hoodie')">
+                            <i class="fas fa-pencil-alt"></i> Customize
+                        </button>
+                        <a href="quotes.html" class="quote-btn">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 4: CUSTOM PATCHES -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Heroimage.jpeg" alt="Woven & Embroidered Patches">
+                    <div class="product-badge">Printed to Order</div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Custom Patches</h3>
+                    <p class="product-description">Woven, embroidered, or PVC patches for uniforms, bags, and branded merchandise.</p>
+
+                    <!-- SPECS TOGGLE -->
+                    <div class="specs-section">
+                        <button class="specs-toggle" data-specs="patches">
+                            <i class="fas fa-chevron-down"></i> Fabric & Print Details
+                        </button>
+                        <div class="specs-content" id="patches-specs" style="display: none;">
+                            <ul>
+                                <li><strong>Types:</strong> Woven, Embroidered, PVC, Heat Transfer</li>
+                                <li><strong>Custom Sizes:</strong> 1"×1" to 4"×4"+ (custom shapes available)</li>
+                                <li><strong>Backing:</strong> Velcro, sew-on, or peel-and-stick</li>
+                                <li><strong>Thread Colors:</strong> 80+ Pantone-matched colors</li>
+                                <li><strong>Minimum Order:</strong> 25 units</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PRICING -->
+                    <div class="pricing-section">
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="price">₦</span>
+                            <span class="price-note">(25–50 units)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="product-buttons">
+                        <button class="customize-btn" onclick="openCustomizeModal('Patch')">
+                            <i class="fas fa-pencil-alt"></i> Customize
+                        </button>
+                        <a href="quotes.html" class="quote-btn">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 5: JERSEYS -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Heroimage.jpeg" alt="Custom Team Jerseys">
+                    <div class="product-badge">Printed to Order</div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Custom Jerseys</h3>
+                    <p class="product-description">Performance-grade team jerseys with sublimation or screen printing. Ideal for sports and events.</p>
+
+                    <!-- SPECS TOGGLE -->
+                    <div class="specs-section">
+                        <button class="specs-toggle" data-specs="jerseys">
+                            <i class="fas fa-chevron-down"></i> Fabric & Print Details
+                        </button>
+                        <div class="specs-content" id="jerseys-specs" style="display: none;">
+                            <ul>
+                                <li><strong>Fabric:</strong> 100% Polyester mesh, moisture-wicking</li>
+                                <li><strong>Print:</strong> Sublimation dye (full color, seamless)</li>
+                                <li><strong>Customization:</strong> Names, numbers, logos on front/back</li>
+                                <li><strong>Sizes:</strong> Youth XS–Adult 5XL</li>
+                                <li><strong>Care:</strong> Machine wash, quick-dry</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PRICING -->
+                    <div class="pricing-section">
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="price">₦</span>
+                            <span class="price-note">(1–10 units)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="product-buttons">
+                        <button class="customize-btn" onclick="openCustomizeModal('Jersey')">
+                            <i class="fas fa-pencil-alt"></i> Customize
+                        </button>
+                        <a href="quotes.html" class="quote-btn">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 6: TOTE BAGS -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Heroimage.jpeg" alt="Custom Printed Tote Bags">
+                    <div class="product-badge">Printed to Order</div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Custom Tote Bags</h3>
+                    <p class="product-description">Durable canvas tote bags perfect for brand promotion and retail partnerships.</p>
+
+                    <!-- SPECS TOGGLE -->
+                    <div class="specs-section">
+                        <button class="specs-toggle" data-specs="totes">
+                            <i class="fas fa-chevron-down"></i> Fabric & Print Details
+                        </button>
+                        <div class="specs-content" id="totes-specs" style="display: none;">
+                            <ul>
+                                <li><strong>Material:</strong> 12 oz 100% cotton canvas</li>
+                                <li><strong>Print:</strong> Screen printing, DTG available</li>
+                                <li><strong>Size:</strong> 14"W × 16"H × 4"D</li>
+                                <li><strong>Handles:</strong> 24" reinforced cotton webbing</li>
+                                <li><strong>Colors:</strong> 8 natural canvas colors</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PRICING -->
+                    <div class="pricing-section">
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="price">₦</span>
+                            <span class="price-note">(1–20 units)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="product-buttons">
+                        <button class="customize-btn" onclick="openCustomizeModal('Tote Bag')">
+                            <i class="fas fa-pencil-alt"></i> Customize
+                        </button>
+                        <a href="quotes.html" class="quote-btn">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BULK PRICING SECTION -->
+    <section class="bulk-pricing page-section">
+        <div class="section-title">
+            <h2>Volume Pricing & Bulk Discounts</h2>
+            <p>The more you order, the more you save. Our tiered pricing rewards bulk orders.</p>
+        </div>
+
+        <div class="pricing-table-container">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>T-Shirts</th>
+                        <th>Hoodies</th>
+                        <th>Caps</th>
+                        <th>Patches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1–10</strong></td>
+                        <td>₦</td>
+                        <td>₦</td>
+                        <td>₦</td>
+                        <td>₦</td>
+                    </tr>
+                    <tr>
+                        <td><strong>11–25</strong></td>
+                        <td>₦ <span class="discount">(–11%)</span></td>
+                        <td>₦ <span class="discount">(–11%)</span></td>
+                        <td>₦ <span class="discount">(–10%)</span></td>
+                        <td>₦ <span class="discount">(–10%)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>26–50</strong></td>
+                        <td>₦ <span class="discount">(–19%)</span></td>
+                        <td>₦ <span class="discount">(–18%)</span></td>
+                        <td>₦ <span class="discount">(–17%)</span></td>
+                        <td>₦ <span class="discount">(–20%)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>51–100</strong></td>
+                        <td>₦ <span class="discount">(–27%)</span></td>
+                        <td>₦ <span class="discount">(–26%)</span></td>
+                        <td>₦ <span class="discount">(–28%)</span></td>
+                        <td>₦ <span class="discount">(–30%)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>100+</strong></td>
+                        <td>₦ <span class="discount">(–38%)</span></td>
+                        <td>₦ <span class="discount">(–37%)</span></td>
+                        <td>₦ <span class="discount">(–38%)</span></td>
+                        <td>₦ <span class="discount">(–40%)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pricing-note">
+            <p><strong>Setup Fee:</strong> Screen printing orders require a one-time ₦ setup fee per design color. <br>
+            <strong>Sample Packs:</strong> Order 5 sample shirts for ₦ (credited toward your next bulk order).</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTION TIMELINE & DISCLAIMER -->
+    <section class="production-info page-section">
+        <div class="section-title">
+            <h2>Production & Shipping Timeline</h2>
+            <p>Clear expectations for every order.</p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-step">
+                <div class="timeline-number">1</div>
+                <h3>Design Approval</h3>
+                <p><strong>1–2 business days</strong><br>We prepare your design proof. You review and approve or request changes.</p>
+            </div>
+
+            <div class="timeline-step">
+                <div class="timeline-number">2</div>
+                <h3>Production</h3>
+                <p><strong>2–4 business days</strong><br>Items are printed or embroidered. Quality-checked and packed with care.</p>
+            </div>
+
+            <div class="timeline-step">
+                <div class="timeline-number">3</div>
+                <h3>Shipping</h3>
+                <p><strong>1–3 business days</strong><br>Shipped via standard carrier. Track your shipment in real time.</p>
+            </div>
+
+            <div class="timeline-step">
+                <div class="timeline-number">4</div>
+                <h3>Delivery</h3>
+                <p><strong>Total: 5–10 business days</strong><br>Your custom items arrive ready to wear.</p>
+            </div>
+        </div>
+
+        <div class="disclaimer-box">
+            <h3><i class="fas fa-info-circle"></i> Important Notice</h3>
+            <p>
+                <strong>All items are printed-to-order.</strong> Production begins only after design approval.
+                Orders with complex designs or large quantities may take up to 2 weeks. Rush orders available (+₦ fee).
+                Cancellations must be requested within 24 hours of order placement.
+            </p>
+        </div>
+    </section>
+
+    <!-- CUSTOMIZE MODAL -->
+    <div id="customizeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Design Your <span id="productName"></span></h2>
+                <button class="modal-close" onclick="closeCustomizeModal()">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="customizeForm">
+                    <div class="form-group">
+                        <label for="designUpload">Upload Your Design (PNG, JPG, PDF)</label>
+                        <input type="file" id="designUpload" accept=".png,.jpg,.jpeg,.pdf" required>
+                        <small>Max file size: 25MB. 300 DPI recommended for printing.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printMethod">Select Print Method</label>
+                        <select id="printMethod" required>
+                            <option value="">-- Choose --</option>
+                            <option value="screen">Screen Printing (best for bold graphics)</option>
+                            <option value="dtg">Direct-to-Garment / DTG (photorealistic detail)</option>
+                            <option value="embroidery">Embroidery (patches, caps, logos)</option>
+                            <option value="sublimation">Sublimation (full-color, no limits)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" min="1" placeholder="How many?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Special Requests or Notes</label>
+                        <textarea id="notes" rows="3" placeholder="Any special instructions?"></textarea>
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button type="submit" class="primary-btn">Get a Quote</button>
+                        <button type="button" class="secondary-btn" onclick="closeCustomizeModal()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+        <h2>Ready to Bring Your Vision to Life?</h2>
+        <p>Upload your design, pick your product, and we'll handle the rest.</p>
+        <a href="#" onclick="openCustomizeModal('Your Product')" class="cta-btn">Start Customizing</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Alexxy Brand</h3>
+                <p>Custom apparel and branded merchandise for businesses, teams, and events.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alexxy Brand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // SPECS TOGGLE
+        document.querySelectorAll(".specs-toggle").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const specsId = this.dataset.specs + "-specs";
+                const specsContent = document.getElementById(specsId);
+                const isOpen = specsContent.style.display !== "none";
+
+                specsContent.style.display = isOpen ? "none" : "block";
+                this.classList.toggle("active");
+                this.querySelector("i").style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+            });
+        });
+
+        // CUSTOMIZE MODAL
+        function openCustomizeModal(productName) {
+            document.getElementById("productName").textContent = productName;
+            document.getElementById("customizeModal").style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeCustomizeModal() {
+            document.getElementById("customizeModal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // CUSTOMIZE FORM SUBMISSION
+        document.getElementById("customizeForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const productName = document.getElementById("productName").textContent;
+            const quantity = document.getElementById("quantity").value;
+            const printMethod = document.getElementById("printMethod").options[document.getElementById("printMethod").selectedIndex].text;
+            const notes = document.getElementById("notes").value;
+
+            // Save to localStorage or send to backend
+            const customRequest = {
+                product: productName,
+                quantity: quantity,
+                printMethod: printMethod,
+                notes: notes,
+                timestamp: new Date().toLocaleString()
+            };
+
+            const requests = JSON.parse(localStorage.getItem("customRequests") || "[]");
+            requests.unshift(customRequest);
+            localStorage.setItem("customRequests", JSON.stringify(requests));
+
+            alert("Your customization request has been saved! Redirecting to quote form...");
+            closeCustomizeModal();
+            window.location.href = "quotes.html";
+        });
+
+        // CLOSE MODAL ON BACKGROUND CLICK
+        window.addEventListener("click", function (event) {
+            const modal = document.getElementById("customizeModal");
+            if (event.target === modal) {
+                closeCustomizeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

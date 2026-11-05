@@ -21,11 +21,10 @@
                 <form id="adminLoginForm">
                     <div class="input-group">
                         <label for="adminPassword">Password</label>
-                        <input type="password" id="adminPassword" placeholder="alexxy-admin" required>
+                        <input type="password" id="adminPassword" required>
                     </div>
 
                     <button type="submit" class="submit-btn">Sign In</button>
-                    <p class="admin-login-hint">Temporary password: alexxy-admin</p>
                     <p class="admin-login-error" id="adminLoginError"></p>
                 </form>
             </div>
@@ -42,6 +41,7 @@
                 <nav class="admin-menu">
                     <a href="#overview" class="active"><i class="fas fa-chart-line"></i> Overview</a>
                     <a href="#requests"><i class="fas fa-file-invoice"></i> Requests</a>
+                    <a href="#customorders"><i class="fas fa-shopping-bag"></i> Custom Orders</a>
                     <a href="#products"><i class="fas fa-shirt"></i> Products</a>
                     <a href="#content"><i class="fas fa-pen-to-square"></i> Content</a>
                 </nav>
@@ -71,10 +71,18 @@
                         </article>
 
                         <article class="admin-stat">
+                            <span><i class="fas fa-shopping-bag"></i></span>
+                            <div>
+                                <p>Custom Orders</p>
+                                <h2 id="customOrderCount">0</h2>
+                            </div>
+                        </article>
+
+                        <article class="admin-stat">
                             <span><i class="fas fa-box-open"></i></span>
                             <div>
                                 <p>Products</p>
-                                <h2>4</h2>
+                                <h2>6</h2>
                             </div>
                         </article>
 
@@ -110,6 +118,34 @@
                             <tbody id="adminQuoteRows">
                                 <tr>
                                     <td colspan="5">No quote requests yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="admin-section" id="customorders">
+                    <div class="admin-section-header">
+                        <div>
+                            <p>Custom Orders</p>
+                            <h2>Product Customization Requests</h2>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Print Method</th>
+                                    <th>Notes</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminCustomOrderRows">
+                                <tr>
+                                    <td colspan="5">No custom orders yet.</td>
                                 </tr>
                             </tbody>
                         </table>
