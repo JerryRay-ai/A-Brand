@@ -667,12 +667,6 @@ body {
     color: #ffb4a8;
 }
 
-.admin-login-hint {
-    margin-top: 14px;
-    color: var(--muted);
-    font-size: .95rem;
-}
-
 .admin-dashboard {
     min-height: 100vh;
     display: grid;
